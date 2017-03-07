@@ -57,17 +57,34 @@
                       </select>
                     </div>
                     <div class="form-group">
-                      <label for="strengthLevel">Caffeine Rating</label>
-                      <input is-slider="yes" name="strength" id="strengthLevel" type="range" value="30">
-                      <span id="range_slider_value">30</span>
+                        <label for="strengthLevel">Caffeine Rating</label>
+                        <input is-slider="yes" name="strength" id="strengthLevel" type="range" value="30">
+                        <span id="range_slider_value">30</span>
+                    </div>
+                    <div id="superPowerDiv" class="form-group" hidden="hidden">
+                        <label for="superPower">Super Power</label>
+                        <select id="superPower" class="form-control" name="superPower">
+                            <option value="">None</option>
+                            <option value="mindPower">Mind Reading</option>
+                            <option value="timeTravel">Time Travel</option>
+                            <option value="bugFreeCode">Bug-Free Code</option>
+                      </select>
                     </div>
                     <button type="submit" class="btn btn-default">Submit</button>
                     <button type="reset" class="btn btn-default">Reset</button>
                 </form>
             </div>
         </div>
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <h4>Pending Orders:</h4>
+                <div data-coffee-order="checklist">
+                </div>
+            </div>
+        </div>
     </section>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js" charset="utf-8"></script>
+    <script src="scripts/checklist.js" charset="utf-8"></script>
     <script src="scripts/formhandler.js" charset="utf-8"></script>
     <script src="scripts/datastore.js" charset="utf-8"></script>
     <script src="scripts/truck.js" charset="utf-8"></script>
