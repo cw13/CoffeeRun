@@ -25,8 +25,10 @@
 
     formHandler.addSliderHandler(SLIDER_SELECTOR);
     formHandler.addSubmitHandler(function(data) {
-        myTruck.createOrder(data);
-        checkList.addRow.call(checkList, data);
+        myTruck.createOrder(data)
+        .then(function () {
+          checkList.addRow.call(checkList, data);
+        });
     });
 
     formHandler.addInputHandler(Validation.isCompanyEmail);
