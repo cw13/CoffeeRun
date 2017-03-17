@@ -33,9 +33,11 @@
             });
 
             console.log(data);
-            dataHandler(data);
-            this.reset();
-            this.elements[0].focus();
+            dataHandler(data)
+            .then(function () {
+              this.reset();
+              this.elements[0].focus();
+            }.bind(this));
         });
 
     FormHandler.prototype.addInputHandler = function (fn) {
